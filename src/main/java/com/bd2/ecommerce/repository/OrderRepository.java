@@ -1,4 +1,4 @@
-package repository;
+package com.bd2.ecommerce.repository;
 
 import com.bd2.ecommerce.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
