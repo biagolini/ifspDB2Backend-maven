@@ -1,4 +1,4 @@
-package com.bd2.ecommerce.repository;
+package repository;
 
 import com.bd2.ecommerce.entity.TypeGenre;
 import org.springframework.data.jpa.repository.JpaRepository;
