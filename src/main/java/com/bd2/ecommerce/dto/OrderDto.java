@@ -10,7 +10,7 @@ public class OrderDto {
 
     private Long id;
     private Long idPrice;
-    private Long idClient;
+    private Long idCustomer;
     private Long idTypeStatusOrder;
     private Long quantity;
     private String trackingCode;
@@ -18,7 +18,7 @@ public class OrderDto {
     public OrderDto(Order order) {
         this.id = order.getId();
         this.idPrice = order.getIdPrice();
-        this.idClient = order.getIdClient();
+        this.idCustomer = order.getIdCustomer();
         this.idTypeStatusOrder = order.getIdTypeStatusOrder();
         this.quantity = order.getQuantity();
         this.trackingCode = order.getTrackingCode();

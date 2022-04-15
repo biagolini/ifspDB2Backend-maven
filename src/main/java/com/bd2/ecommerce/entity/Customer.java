@@ -12,15 +12,24 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idclient")
+    @Column(name = "idCustomer")
     private Long id;
 
-    @Column(name = "dsname")
-    private String name;
+    @Column(name = "dsUsername")
+    private String username;
+
+    @Column(name = "dsFirstName")
+    private String firstName;
+
+    @Column(name = "dsLastName")
+    private String lastName;
+
+    @Column(name = "dsEmail")
+    private String email;
 
     @Column(name = "dsbirthdate")
     private LocalDate birthDate;

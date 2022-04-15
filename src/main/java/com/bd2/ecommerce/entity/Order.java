@@ -21,8 +21,8 @@ public class Order {
     @Column(name = "idprice")
     private Long idPrice;
 
-    @Column(name = "idclient")
-    private Long idClient;
+    @Column(name = "idcustomer")
+    private Long idCustomer;
 
     @Column(name = "idtypestatusorder")
     private Long idTypeStatusOrder;
