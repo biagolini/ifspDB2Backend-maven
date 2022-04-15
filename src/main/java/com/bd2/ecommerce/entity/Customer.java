@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tblclient")
+@Table(name = "tblcustomer")
 @Builder
 @Getter
 @Setter
