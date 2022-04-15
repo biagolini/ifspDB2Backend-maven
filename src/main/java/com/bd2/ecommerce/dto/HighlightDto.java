@@ -19,4 +19,5 @@ public class HighlightDto {
         this.game = highlight.getGame();
         this.publicationDate = highlight.getPublicationDate();
     }
+
 }
