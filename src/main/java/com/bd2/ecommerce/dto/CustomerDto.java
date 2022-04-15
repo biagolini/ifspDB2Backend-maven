@@ -34,7 +34,7 @@ public class CustomerDto {
         this.street = customer.getStreet();
         this.number = customer.getNumber();
         this.city = customer.getCity();
-        this.state = customer.getState();
+        this.state = customer.getStateId();
         this.zip = customer.getZip();
     }
 }

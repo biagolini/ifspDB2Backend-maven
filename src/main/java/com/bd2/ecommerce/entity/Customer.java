@@ -16,19 +16,19 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idCustomer")
+    @Column(name = "idcustomer")
     private Long id;
 
-    @Column(name = "dsUsername")
+    @Column(name = "dsusername")
     private String username;
 
-    @Column(name = "dsFirstName")
+    @Column(name = "dsfirstname")
     private String firstName;
 
-    @Column(name = "dsLastName")
+    @Column(name = "dslastname")
     private String lastName;
 
-    @Column(name = "dsEmail")
+    @Column(name = "dsemail")
     private String email;
 
     @Column(name = "dsbirthdate")
@@ -47,7 +47,7 @@ public class Customer {
     private String city;
 
     @Column(name = "idtypestate")
-    private Long state;
+    private Long stateId;
 
     @Column(name = "dszip")
     private String zip;
