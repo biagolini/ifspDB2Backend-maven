@@ -1,12 +1,17 @@
 package com.bd2.ecommerce.controller;
 
 import com.bd2.ecommerce.dto.CustomerDto;
+import com.bd2.ecommerce.dto.CustomerForm;
 import com.bd2.ecommerce.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.transaction.Transactional;
 
 @RestController
 @RequestMapping("api/customer")
@@ -42,5 +47,26 @@ public class CustomerController {
                 .findAll(pageable,firstName, lastName, email, cpf)
                 .map(entity -> this.conversionService.convert(entity,CustomerDto.class));
         }
+
+    @PostMapping()
+    public ResponseEntity<?> createCustomer(@RequestBody CustomerForm form) {
+        this.customerService.createCustomer(form);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<?> inactiveCustomer(@PathVariable Long id) {
+        this.customerService.inactiveCustomer(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    @Transactional
+    public ResponseEntity<?> updateCustomer(@PathVariable Long id, @RequestBody  CustomerForm form) {
+        this.customerService.updateCustomer(id, form);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
 }

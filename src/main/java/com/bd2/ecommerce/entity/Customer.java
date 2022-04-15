@@ -1,5 +1,6 @@
 package com.bd2.ecommerce.entity;
 
+import com.bd2.ecommerce.dto.CustomerForm;
 import lombok.*;
 
 import javax.persistence.*;
@@ -54,6 +55,36 @@ public class Customer {
 
     @Column(name = "stactive")
     private Boolean isActive;
+
+    public Customer(CustomerForm form) {
+        this.username = form.getUsername();
+        this.firstName = form.getFirstName();
+        this.lastName = form.getLastName();
+        this.email = form.getEmail();
+        this.birthDate = form.getBirthDate();
+        this.cpf = form.getCpf();
+        this.street = form.getStreet();
+        this.number = form.getNumber();
+        this.city = form.getCity();
+        this.stateId = form.getState();
+        this.zip = form.getZip();
+        this.isActive = true;
+    }
+
+    public void update(CustomerForm form) {
+        this.username = form.getUsername();
+        this.firstName = form.getFirstName();
+        this.lastName = form.getLastName();
+        this.email = form.getEmail();
+        this.birthDate = form.getBirthDate();
+        this.cpf = form.getCpf();
+        this.street = form.getStreet();
+        this.number = form.getNumber();
+        this.city = form.getCity();
+        this.stateId = form.getState();
+        this.zip = form.getZip();
+        this.isActive = true;
+    }
 
 }
 
